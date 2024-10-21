@@ -28,6 +28,7 @@ const database = client.db("techTonicDb");
 
 const usersCollection = database.collection("users");
 const productsCollection = database.collection("products");
+const categoriesCollection = database.collection("categories");
 const ordersCollection = database.collection("orders");
 
 async function run() {
@@ -136,7 +137,7 @@ async function run() {
     // get single product
     app.get("/products/:id", async (req, res) => {
       const id = req.params.id;
-      const query = { _id: ObjectId(id) };
+      const query = { _id: new ObjectId(id) };
       const product = await productsCollection.findOne(query);
       res.json(product);
     });
@@ -171,6 +172,7 @@ async function run() {
           model: product?.model,
           price: product?.price,
           releaseDate: product?.releaseDate,
+          photoUrl: product?.photoUrl,
           specifications: {
             display: {
               type: product?.specifications?.display?.type,
@@ -219,6 +221,21 @@ async function run() {
       );
 
       res.json(result);
+    });
+
+    // --------------------Categories----------------------
+
+    app.get("/categories", async (req, res) => {
+      const categories = await categoriesCollection.find().toArray();
+      res.json(categories);
+    });
+
+    app.get("/categories/:categoryName", async (req, res) => {
+      const categoryName = req.params.categoryName;
+
+      const query = { category: categoryName };
+      const categories = await productsCollection.find(query).toArray();
+      res.json(categories);
     });
 
     // ---------------- CRUD Ends -------------------------------------------

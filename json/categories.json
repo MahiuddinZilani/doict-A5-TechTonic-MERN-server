@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "name": "laptop",
+    "description": "Portable computers for personal and professional use, available with various configurations for different needs.",
+    "photoURL": "https://example.com/categories/laptops.jpg"
+  },
+  {
+    "id": "2",
+    "name": "smartphone",
+    "description": "Mobile phones with advanced features, including high-speed processors, camera technology, and apps.",
+    "photoURL": "https://example.com/categories/smartphones.jpg"
+  },
+  {
+    "id": "3",
+    "name": "tablet",
+    "description": "Touchscreen devices offering portability and power for work, education, or entertainment.",
+    "photoURL": "https://example.com/categories/tablets.jpg"
+  },
+  {
+    "id": "4",
+    "name": "headphone",
+    "description": "High-quality over-ear and in-ear headphones for music, gaming, and calls, featuring noise cancellation and wireless options.",
+    "photoURL": "https://example.com/categories/headphones.jpg"
+  },
+  {
+    "id": "5",
+    "name": "gaming console",
+    "description": "Home entertainment systems designed for immersive gaming experiences with powerful hardware and exclusive games.",
+    "photoURL": "https://example.com/categories/gaming-consoles.jpg"
+  },
+  {
+    "id": "6",
+    "name": "smartwatch",
+    "description": "Wearable devices with health tracking, notifications, and fitness features, seamlessly integrated with your smartphone.",
+    "photoURL": "https://example.com/categories/smartwatches.jpg"
+  },
+  {
+    "id": "7",
+    "name": "printer",
+    "description": "Printers for home or office use, offering high-quality printing, scanning, and copying functions.",
+    "photoURL": "https://example.com/categories/printers.jpg"
+  },
+  {
+    "id": "8",
+    "name": "monitor",
+    "description": "High-definition monitors for work, gaming, or entertainment with advanced display technology.",
+    "photoURL": "https://example.com/categories/monitors.jpg"
+  },
+  {
+    "id": "9",
+    "name": "keyboard",
+    "description": "Mechanical and membrane keyboards designed for gaming, productivity, and comfort.",
+    "photoURL": "https://example.com/categories/keyboards.jpg"
+  },
+  {
+    "id": "10",
+    "name": "mouse",
+    "description": "Precision mice designed for gamers, designers, and professionals with customizable buttons and ergonomic designs.",
+    "photoURL": "https://example.com/categories/mice.jpg"
+  },
+  {
+    "id": "11",
+    "name": "speaker",
+    "description": "Portable and home speakers with superior sound quality, designed for music, parties, and outdoor use.",
+    "photoURL": "https://example.com/categories/speakers.jpg"
+  },
+  {
+    "id": "12",
+    "name": "smart home",
+    "description": "Smart home devices to automate and manage your home with voice control and advanced AI technology.",
+    "photoURL": "https://example.com/categories/smart-home.jpg"
+  }
+]

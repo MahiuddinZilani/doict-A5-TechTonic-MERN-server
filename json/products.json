@@ -1,0 +1,773 @@
+[
+  {
+    "id": "1",
+    "name": "Dell XPS 13",
+    "brand": "Dell",
+    "category": "laptop",
+    "price": 1299,
+    "stock": 25,
+    "releaseDate": "2023-03-10",
+    "specifications": {
+      "processor": "Intel i7",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "display": {
+        "size": "13.4 inches",
+        "type": "LCD",
+        "resolution": "1920x1080"
+      },
+      "battery": "52Wh",
+      "os": "Windows 11"
+    },
+    "photoURL": "https://example.com/products/dell-xps13.jpg",
+    "rating": 4.8,
+    "reviews": 245
+  },
+  {
+    "id": "2",
+    "name": "MacBook Pro 14",
+    "brand": "Apple",
+    "category": "laptop",
+    "price": 1999,
+    "stock": 15,
+    "releaseDate": "2023-10-20",
+    "specifications": {
+      "processor": "M1 Pro",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "display": {
+        "size": "14.2 inches",
+        "type": "Retina",
+        "resolution": "3024x1964"
+      },
+      "battery": "70Wh",
+      "os": "macOS Monterey"
+    },
+    "photoURL": "https://example.com/products/macbook-pro-14.jpg",
+    "rating": 4.9,
+    "reviews": 530
+  },
+  {
+    "id": "3",
+    "name": "HP Omen 15",
+    "brand": "HP",
+    "category": "laptop",
+    "price": 1499,
+    "stock": 30,
+    "releaseDate": "2023-07-15",
+    "specifications": {
+      "processor": "AMD Ryzen 9",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "display": {
+        "size": "15.6 inches",
+        "type": "IPS",
+        "resolution": "2560x1440"
+      },
+      "battery": "58Wh",
+      "os": "Windows 11"
+    },
+    "photoURL": "https://example.com/products/hp-omen-15.jpg",
+    "rating": 4.6,
+    "reviews": 350
+  },
+  {
+    "id": "4",
+    "name": "Lenovo IdeaPad 5",
+    "brand": "Lenovo",
+    "category": "laptop",
+    "price": 899,
+    "stock": 40,
+    "releaseDate": "2023-01-25",
+    "specifications": {
+      "processor": "Intel i5",
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "display": {
+        "size": "14 inches",
+        "type": "LCD",
+        "resolution": "1920x1080"
+      },
+      "battery": "45Wh",
+      "os": "Windows 11"
+    },
+    "photoURL": "https://example.com/products/lenovo-ideapad-5.jpg",
+    "rating": 4.3,
+    "reviews": 180
+  },
+  {
+    "id": "5",
+    "name": "Acer Aspire 7",
+    "brand": "Acer",
+    "category": "laptop",
+    "price": 1099,
+    "stock": 20,
+    "releaseDate": "2023-04-20",
+    "specifications": {
+      "processor": "Intel i7",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "display": {
+        "size": "15.6 inches",
+        "type": "LCD",
+        "resolution": "1920x1080"
+      },
+      "battery": "48Wh",
+      "os": "Windows 11"
+    },
+    "photoURL": "https://example.com/products/acer-aspire-7.jpg",
+    "rating": 4.4,
+    "reviews": 210
+  },
+  {
+    "id": "6",
+    "name": "Samsung Galaxy Tab S8",
+    "brand": "Samsung",
+    "category": "tablet",
+    "price": 849,
+    "stock": 50,
+    "releaseDate": "2023-02-15",
+    "specifications": {
+      "processor": "Snapdragon 8 Gen 1",
+      "ram": "8GB",
+      "storage": "128GB",
+      "display": {
+        "size": "11 inches",
+        "type": "Super AMOLED",
+        "resolution": "2560x1600"
+      },
+      "battery": "8000mAh",
+      "os": "Android 12"
+    },
+    "photoURL": "https://example.com/products/galaxy-tab-s8.jpg",
+    "rating": 4.7,
+    "reviews": 410
+  },
+  {
+    "id": "7",
+    "name": "Apple iPad Pro 12.9",
+    "brand": "Apple",
+    "category": "tablet",
+    "price": 1099,
+    "stock": 35,
+    "releaseDate": "2023-09-30",
+    "specifications": {
+      "processor": "M1",
+      "ram": "8GB",
+      "storage": "128GB",
+      "display": {
+        "size": "12.9 inches",
+        "type": "Liquid Retina",
+        "resolution": "2732x2048"
+      },
+      "battery": "9720mAh",
+      "os": "iPadOS 15"
+    },
+    "photoURL": "https://example.com/products/ipad-pro-12.9.jpg",
+    "rating": 4.8,
+    "reviews": 550
+  },
+  {
+    "id": "8",
+    "name": "Microsoft Surface Pro 8",
+    "brand": "Microsoft",
+    "category": "tablet",
+    "price": 1299,
+    "stock": 18,
+    "releaseDate": "2023-08-01",
+    "specifications": {
+      "processor": "Intel i7",
+      "ram": "16GB",
+      "storage": "256GB SSD",
+      "display": {
+        "size": "13 inches",
+        "type": "PixelSense",
+        "resolution": "2880x1920"
+      },
+      "battery": "7000mAh",
+      "os": "Windows 11"
+    },
+    "photoURL": "https://example.com/products/surface-pro-8.jpg",
+    "rating": 4.6,
+    "reviews": 330
+  },
+  {
+    "id": "9",
+    "name": "iPhone 14 Pro",
+    "brand": "Apple",
+    "category": "smartphone",
+    "price": 1199,
+    "stock": 80,
+    "releaseDate": "2023-11-25",
+    "specifications": {
+      "processor": "A16 Bionic",
+      "ram": "6GB",
+      "storage": "128GB",
+      "display": {
+        "size": "6.1 inches",
+        "type": "Super Retina XDR",
+        "resolution": "2532x1170"
+      },
+      "battery": "3200mAh",
+      "camera": {
+        "rear": "48MP",
+        "front": {
+          "resolution": "12MP",
+          "features": ["Night Mode", "4K video recording"]
+        }
+      },
+      "os": "iOS 17"
+    },
+    "photoURL": "https://example.com/products/iphone-14-pro.jpg",
+    "rating": 4.9,
+    "reviews": 720
+  },
+  {
+    "id": "10",
+    "name": "Google Pixel 7",
+    "brand": "Google",
+    "category": "smartphone",
+    "price": 899,
+    "stock": 100,
+    "releaseDate": "2023-10-01",
+    "specifications": {
+      "processor": "Tensor G2",
+      "ram": "8GB",
+      "storage": "128GB",
+      "display": {
+        "size": "6.3 inches",
+        "type": "OLED",
+        "resolution": "2400x1080"
+      },
+      "battery": "4700mAh",
+      "camera": {
+        "rear": "50MP",
+        "front": {
+          "resolution": "12MP",
+          "features": ["4K video recording"]
+        }
+      },
+      "os": "Android 13"
+    },
+    "photoURL": "https://example.com/products/pixel-7.jpg",
+    "rating": 4.7,
+    "reviews": 620
+  },
+  {
+    "id": "11",
+    "name": "Samsung Galaxy S22 Ultra",
+    "brand": "Samsung",
+    "category": "smartphone",
+    "price": 1199,
+    "stock": 70,
+    "releaseDate": "2023-09-15",
+    "specifications": {
+      "processor": "Snapdragon 8 Gen 1",
+      "ram": "12GB",
+      "storage": "256GB",
+      "display": {
+        "size": "6.8 inches",
+        "type": "AMOLED",
+        "resolution": "3200x1440"
+      },
+      "battery": "5000mAh",
+      "camera": {
+        "rear": "108MP",
+        "front": {
+          "resolution": "40MP",
+          "features": ["8K video recording"]
+        }
+      },
+      "os": "Android 13"
+    },
+    "photoURL": "https://example.com/products/galaxy-s22-ultra.jpg",
+    "rating": 4.8,
+    "reviews": 680
+  },
+  {
+    "id": "12",
+    "name": "Nokia 3310",
+    "brand": "Nokia",
+    "category": "feature phone",
+    "price": 49,
+    "stock": 500,
+    "releaseDate": "2023-01-01",
+    "specifications": {
+      "display": {
+        "size": "2.4 inches",
+        "type": "LCD",
+        "resolution": "320x240"
+      },
+      "battery": "1200mAh",
+      "os": "Series 30+",
+      "storage": "16MB",
+      "camera": {
+        "rear": "2MP",
+        "front": null
+      }
+    },
+    "photoURL": "https://example.com/products/nokia-3310.jpg",
+    "rating": 4.2,
+    "reviews": 300
+  },
+  {
+    "id": "13",
+    "name": "Sony WH-1000XM5",
+    "brand": "Sony",
+    "category": "headphones",
+    "price": 399,
+    "stock": 150,
+    "releaseDate": "2023-08-05",
+    "specifications": {
+      "connectivity": "Bluetooth 5.2",
+      "noiseCancellation": true,
+      "batteryLife": "30 hours",
+      "chargingTime": "3 hours",
+      "microphone": true
+    },
+    "photoURL": "https://example.com/products/sony-wh1000xm5.jpg",
+    "rating": 4.8,
+    "reviews": 950
+  },
+  {
+    "id": "14",
+    "name": "Bose QuietComfort 45",
+    "brand": "Bose",
+    "category": "headphones",
+    "price": 329,
+    "stock": 120,
+    "releaseDate": "2023-05-20",
+    "specifications": {
+      "connectivity": "Bluetooth 5.1",
+      "noiseCancellation": true,
+      "batteryLife": "24 hours",
+      "chargingTime": "2.5 hours",
+      "microphone": true
+    },
+    "photoURL": "https://example.com/products/bose-qc45.jpg",
+    "rating": 4.7,
+    "reviews": 800
+  },
+  {
+    "id": "15",
+    "name": "Apple AirPods Pro 2",
+    "brand": "Apple",
+    "category": "earbuds",
+    "price": 249,
+    "stock": 300,
+    "releaseDate": "2023-09-01",
+    "specifications": {
+      "connectivity": "Bluetooth 5.3",
+      "noiseCancellation": true,
+      "batteryLife": "6 hours",
+      "chargingCaseBattery": "MagSafe Wireless Charging",
+      "microphone": true
+    },
+    "photoURL": "https://example.com/products/airpods-pro-2.jpg",
+    "rating": 4.8,
+    "reviews": 1500
+  },
+  {
+    "id": "16",
+    "name": "Sony PlayStation 5",
+    "brand": "Sony",
+    "category": "gaming console",
+    "price": 499,
+    "stock": 200,
+    "releaseDate": "2023-04-10",
+    "specifications": {
+      "processor": "8-core AMD Ryzen",
+      "storage": "825GB SSD",
+      "graphics": "AMD Radeon RDNA 2",
+      "output": "4K UHD"
+    },
+    "photoURL": "https://example.com/products/ps5.jpg",
+    "rating": 4.9,
+    "reviews": 1500
+  },
+  {
+    "id": "17",
+    "name": "Xbox Series X",
+    "brand": "Microsoft",
+    "category": "gaming console",
+    "price": 499,
+    "stock": 180,
+    "releaseDate": "2023-05-15",
+    "specifications": {
+      "processor": "8-core AMD Ryzen",
+      "storage": "1TB SSD",
+      "graphics": "AMD RDNA 2",
+      "output": "4K UHD"
+    },
+    "photoURL": "https://example.com/products/xbox-series-x.jpg",
+    "rating": 4.8,
+    "reviews": 1400
+  },
+  {
+    "id": "18",
+    "name": "Nintendo Switch OLED",
+    "brand": "Nintendo",
+    "category": "gaming console",
+    "price": 349,
+    "stock": 250,
+    "releaseDate": "2023-06-10",
+    "specifications": {
+      "processor": "NVIDIA Tegra X1",
+      "storage": "64GB",
+      "display": "7-inch OLED",
+      "battery": "4310mAh"
+    },
+    "photoURL": "https://example.com/products/nintendo-switch-oled.jpg",
+    "rating": 4.7,
+    "reviews": 1200
+  },
+  {
+    "id": "19",
+    "name": "Apple Watch Series 9",
+    "brand": "Apple",
+    "category": "smartwatch",
+    "price": 399,
+    "stock": 400,
+    "releaseDate": "2023-09-12",
+    "specifications": {
+      "display": "1.78 inches Retina",
+      "battery": "18 hours",
+      "connectivity": "Bluetooth 5.3, LTE",
+      "healthFeatures": ["ECG", "Blood Oxygen"]
+    },
+    "photoURL": "https://example.com/products/apple-watch-series-9.jpg",
+    "rating": 4.9,
+    "reviews": 1000
+  },
+  {
+    "id": "20",
+    "name": "Samsung Galaxy Watch 6",
+    "brand": "Samsung",
+    "category": "smartwatch",
+    "price": 299,
+    "stock": 350,
+    "releaseDate": "2023-07-20",
+    "specifications": {
+      "display": "1.4 inches AMOLED",
+      "battery": "2 days",
+      "connectivity": "Bluetooth 5.0, LTE",
+      "healthFeatures": ["Heart Rate", "Sleep Tracking"]
+    },
+    "photoURL": "https://example.com/products/galaxy-watch-6.jpg",
+    "rating": 4.7,
+    "reviews": 900
+  },
+  {
+    "id": "21",
+    "name": "Fitbit Versa 4",
+    "brand": "Fitbit",
+    "category": "smartwatch",
+    "price": 199,
+    "stock": 500,
+    "releaseDate": "2023-03-05",
+    "specifications": {
+      "display": "1.58 inches OLED",
+      "battery": "6 days",
+      "connectivity": "Bluetooth 5.0",
+      "healthFeatures": ["Heart Rate", "SpO2 Sensor"]
+    },
+    "photoURL": "https://example.com/products/fitbit-versa-4.jpg",
+    "rating": 4.6,
+    "reviews": 850
+  },
+  {
+    "id": "22",
+    "name": "Dell Ultrasharp 27",
+    "brand": "Dell",
+    "category": "monitor",
+    "price": 699,
+    "stock": 90,
+    "releaseDate": "2023-01-25",
+    "specifications": {
+      "display": {
+        "size": "27 inches",
+        "type": "IPS",
+        "resolution": "3840x2160"
+      },
+      "refreshRate": "60Hz",
+      "connectivity": ["HDMI", "DisplayPort", "USB-C"]
+    },
+    "photoURL": "https://example.com/products/dell-ultrasharp-27.jpg",
+    "rating": 4.8,
+    "reviews": 450
+  },
+  {
+    "id": "23",
+    "name": "Samsung Odyssey G7",
+    "brand": "Samsung",
+    "category": "monitor",
+    "price": 799,
+    "stock": 60,
+    "releaseDate": "2023-04-15",
+    "specifications": {
+      "display": {
+        "size": "32 inches",
+        "type": "QLED",
+        "resolution": "2560x1440"
+      },
+      "refreshRate": "240Hz",
+      "connectivity": ["HDMI", "DisplayPort"]
+    },
+    "photoURL": "https://example.com/products/odyssey-g7.jpg",
+    "rating": 4.9,
+    "reviews": 370
+  },
+  {
+    "id": "24",
+    "name": "HP Envy 6020 All-in-One Printer",
+    "brand": "HP",
+    "category": "printer",
+    "price": 199,
+    "stock": 120,
+    "releaseDate": "2023-06-01",
+    "specifications": {
+      "type": "All-in-One",
+      "connectivity": "Wi-Fi, USB",
+      "printingTechnology": "Inkjet",
+      "printSpeed": "10 pages per minute"
+    },
+    "photoURL": "https://example.com/products/hp-envy-6020.jpg",
+    "rating": 4.6,
+    "reviews": 340
+  },
+  {
+    "id": "25",
+    "name": "Canon Pixma G7020",
+    "brand": "Canon",
+    "category": "printer",
+    "price": 299,
+    "stock": 150,
+    "releaseDate": "2023-05-10",
+    "specifications": {
+      "type": "All-in-One",
+      "connectivity": "Wi-Fi, Ethernet",
+      "printingTechnology": "Inkjet",
+      "printSpeed": "13 pages per minute"
+    },
+    "photoURL": "https://example.com/products/canon-pixma-g7020.jpg",
+    "rating": 4.7,
+    "reviews": 380
+  },
+  {
+    "id": "26",
+    "name": "Logitech MX Master 3",
+    "brand": "Logitech",
+    "category": "mouse",
+    "price": 99,
+    "stock": 200,
+    "releaseDate": "2023-02-01",
+    "specifications": {
+      "connectivity": "Bluetooth, USB",
+      "batteryLife": "70 days",
+      "dpi": "4000",
+      "features": ["Ergonomic design", "Customizable buttons"]
+    },
+    "photoURL": "https://example.com/products/mx-master-3.jpg",
+    "rating": 4.8,
+    "reviews": 1200
+  },
+  {
+    "id": "27",
+    "name": "Corsair K95 RGB Platinum",
+    "brand": "Corsair",
+    "category": "keyboard",
+    "price": 199,
+    "stock": 140,
+    "releaseDate": "2023-03-12",
+    "specifications": {
+      "connectivity": "Wired",
+      "switchType": "Cherry MX Speed",
+      "lighting": "RGB",
+      "features": ["Macro keys", "Media controls"]
+    },
+    "photoURL": "https://example.com/products/corsair-k95.jpg",
+    "rating": 4.7,
+    "reviews": 950
+  },
+  {
+    "id": "28",
+    "name": "Apple Magic Keyboard",
+    "brand": "Apple",
+    "category": "keyboard",
+    "price": 129,
+    "stock": 300,
+    "releaseDate": "2023-09-05",
+    "specifications": {
+      "connectivity": "Bluetooth",
+      "batteryLife": "1 month",
+      "features": ["Touch ID", "Rechargeable"]
+    },
+    "photoURL": "https://example.com/products/apple-magic-keyboard.jpg",
+    "rating": 4.8,
+    "reviews": 1100
+  },
+  {
+    "id": "29",
+    "name": "JBL Flip 6",
+    "brand": "JBL",
+    "category": "speaker",
+    "price": 129,
+    "stock": 220,
+    "releaseDate": "2023-04-05",
+    "specifications": {
+      "connectivity": "Bluetooth",
+      "batteryLife": "12 hours",
+      "waterResistance": "IP67",
+      "features": ["Bass Boost", "PartyBoost"]
+    },
+    "photoURL": "https://example.com/products/jbl-flip-6.jpg",
+    "rating": 4.7,
+    "reviews": 900
+  },
+  {
+    "id": "30",
+    "name": "Sony SRS-XB43",
+    "brand": "Sony",
+    "category": "speaker",
+    "price": 249,
+    "stock": 180,
+    "releaseDate": "2023-07-15",
+    "specifications": {
+      "connectivity": "Bluetooth",
+      "batteryLife": "24 hours",
+      "waterResistance": "IP67",
+      "features": ["Extra Bass", "Live Sound Mode"]
+    },
+    "photoURL": "https://example.com/products/sony-srs-xb43.jpg",
+    "rating": 4.8,
+    "reviews": 750
+  },
+  {
+    "id": "31",
+    "name": "Google Nest Hub",
+    "brand": "Google",
+    "category": "smart home",
+    "price": 99,
+    "stock": 200,
+    "releaseDate": "2023-06-10",
+    "specifications": {
+      "display": "7 inches",
+      "voiceAssistant": "Google Assistant",
+      "connectivity": "Wi-Fi, Bluetooth",
+      "features": ["Smart Home Control", "Sleep Sensing"]
+    },
+    "photoURL": "https://example.com/products/google-nest-hub.jpg",
+    "rating": 4.6,
+    "reviews": 600
+  },
+  {
+    "id": "32",
+    "name": "Amazon Echo Show 10",
+    "brand": "Amazon",
+    "category": "smart home",
+    "price": 249,
+    "stock": 180,
+    "releaseDate": "2023-05-18",
+    "specifications": {
+      "display": "10.1 inches",
+      "voiceAssistant": "Alexa",
+      "connectivity": "Wi-Fi, Bluetooth",
+      "features": ["Smart Home Control", "Video Calling"]
+    },
+    "photoURL": "https://example.com/products/echo-show-10.jpg",
+    "rating": 4.7,
+    "reviews": 700
+  },
+  {
+    "id": "33",
+    "name": "Lenovo Legion 5 Pro",
+    "brand": "Lenovo",
+    "category": "laptop",
+    "price": 1599,
+    "stock": 110,
+    "releaseDate": "2023-07-08",
+    "specifications": {
+      "processor": "AMD Ryzen 7 5800H",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "graphics": "NVIDIA RTX 3070",
+      "display": {
+        "size": "16 inches",
+        "resolution": "2560x1600",
+        "refreshRate": "165Hz"
+      }
+    },
+    "photoURL": "https://example.com/products/lenovo-legion-5-pro.jpg",
+    "rating": 4.9,
+    "reviews": 500
+  },
+  {
+    "id": "34",
+    "name": "Razer Blade 15",
+    "brand": "Razer",
+    "category": "laptop",
+    "price": 1999,
+    "stock": 90,
+    "releaseDate": "2023-08-12",
+    "specifications": {
+      "processor": "Intel Core i7-12800H",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "graphics": "NVIDIA RTX 3080",
+      "display": {
+        "size": "15.6 inches",
+        "resolution": "2560x1440",
+        "refreshRate": "240Hz"
+      }
+    },
+    "photoURL": "https://example.com/products/razer-blade-15.jpg",
+    "rating": 4.8,
+    "reviews": 650
+  },
+  {
+    "id": "35",
+    "name": "Asus ROG Strix G15",
+    "brand": "Asus",
+    "category": "laptop",
+    "price": 1499,
+    "stock": 140,
+    "releaseDate": "2023-05-22",
+    "specifications": {
+      "processor": "AMD Ryzen 9 5900HX",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "graphics": "NVIDIA RTX 3060",
+      "display": {
+        "size": "15.6 inches",
+        "resolution": "1920x1080",
+        "refreshRate": "144Hz"
+      }
+    },
+    "photoURL": "https://example.com/products/asus-rog-strix-g15.jpg",
+    "rating": 4.7,
+    "reviews": 400
+  },
+  {
+    "id": "36",
+    "name": "MSI GE76 Raider",
+    "brand": "MSI",
+    "category": "laptop",
+    "price": 1799,
+    "stock": 100,
+    "releaseDate": "2023-09-01",
+    "specifications": {
+      "processor": "Intel Core i7-12800H",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "graphics": "NVIDIA RTX 3070",
+      "display": {
+        "size": "17.3 inches",
+        "resolution": "2560x1440",
+        "refreshRate": "240Hz"
+      }
+    },
+    "photoURL": "https://example.com/products/msi-ge76-raider.jpg",
+    "rating": 4.8,
+    "reviews": 520
+  }
+]
