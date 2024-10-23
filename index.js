@@ -29,7 +29,7 @@ const database = client.db("techTonicDb");
 const usersCollection = database.collection("users");
 const productsCollection = database.collection("products");
 const categoriesCollection = database.collection("categories");
-const ordersCollection = database.collection("orders");
+const cartsCollection = database.collection("carts");
 
 async function run() {
   try {
@@ -57,6 +57,13 @@ async function run() {
     // create users
     app.post("/users", async (req, res) => {
       const user = req.body;
+      const query = { email: user.email };
+      const existingUser = await usersCollection.findOne(query);
+      if (existingUser) {
+        return res
+          .status(400)
+          .json({ message: "User already exists", insertedId: null });
+      }
       const result = await usersCollection.insertOne(user);
       res.json(result);
       //   res.send(result);
@@ -84,37 +91,17 @@ async function run() {
     });
 
     //update users
-    app.put("/users/:id", async (req, res) => {
-      const id = req.params.id;
+    app.patch("/users/:email", async (req, res) => {
+      const email = req.params.email;
       const user = req.body;
-      const filter = { _id: new ObjectId(id) };
+      const filter = { email: email };
 
       const newUser = {
         $set: {
-          name: user.name,
-          email: user.email,
-          password: user.password,
-          role: user.role,
-          status: user.status,
-          createdAt: user.createdAt,
-          updatedAt: user.updatedAt,
-          lastLogin: user.lastLogin,
-          profilePic: user.profilePic,
-          phoneNumber: user.phoneNumber,
-          address: {
-            street: user.address?.street,
-            city: user.address.city,
-            state: user.address.state,
-            zip: user.address.zip,
-            country: user.address.country,
-          },
-          permissions: user.permissions,
-          securityQuestions: [
-            {
-              question: user.securityQuestions[0].question,
-              answer: user.securityQuestions[0].answer,
-            },
-          ],
+          displayName: user.displayName,
+          photoUrl: user.photoUrl,
+          phone: user.phone,
+          address: user.address,
         },
       };
 
@@ -238,7 +225,20 @@ async function run() {
       res.json(categories);
     });
 
-    // ---------------- CRUD Ends -------------------------------------------
+    // ------------------------------- carts collection ---------------------
+    app.get("/carts/:email", async (req, res) => {
+      const email = req.params.email;
+      const query = { email: email };
+      const cart = await cartsCollection.find(query).toArray();
+      res.json(cart);
+    });
+    app.post("/carts", async (req, res) => {
+      const cart = req.body;
+      const result = await cartsCollection.insertOne(cart);
+      res.json(result);
+    });
+
+    // --------------------------------- CRUD Ends -------------------------------------------
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
