@@ -96,18 +96,33 @@ async function run() {
       const user = req.body;
       const filter = { email: email };
 
-      const newUser = {
+      const updateUser = {
         $set: {
           displayName: user.displayName,
           photoUrl: user.photoUrl,
           phone: user.phone,
           address: user.address,
+          uid: user.uid,
+          // email: user.email,
+          isAdmin: user?.isAdmin,
+          isBlocked: user?.isBlocked,
         },
       };
 
       const option = { upsert: true };
 
-      const result = usersCollection.updateOne(filter, newUser, option);
+      const result = usersCollection.updateOne(filter, updateUser, option);
+
+      res.json(result);
+    });
+    // change users role
+    app.patch("/users/:email/role", async (req, res) => {
+      const email = req.params.email;
+      const { isAdmin } = req.body;
+
+      const filter = { email };
+      const update = { $set: { isAdmin } };
+      const result = await usersCollection.updateOne(filter, update);
 
       res.json(result);
     });
@@ -142,63 +157,72 @@ async function run() {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
       const result = await productsCollection.deleteOne(query);
-
+      console.log(result);
       res.json(result);
     });
 
     //update products
-    app.put("/products/:id", async (req, res) => {
+    app.patch("/products/:id", async (req, res) => {
       const id = req.params.id;
       const product = req.body;
       const filter = { _id: new ObjectId(id) };
 
+      // const updateProduct = {
+      //   $set: {
+      //     id: product?.id,
+      //     brand: product?.brand,
+      //     model: product?.model,
+      //     price: product?.price,
+      //     releaseDate: product?.releaseDate,
+      //     photoUrl: product?.photoUrl,
+      //     specifications: {
+      //       display: {
+      //         type: product?.specifications?.display?.type,
+      //         size: product?.specifications?.display?.size,
+      //         resolution: product?.specifications?.display?.resolution,
+      //       },
+      //       processor: product?.specifications?.processor,
+      //       ram: product?.specifications?.ram,
+      //       storage: product?.specifications?.storage,
+      //       camera: {
+      //         rear: product?.specifications?.camera?.rear,
+      //         front: {
+      //           resolution: product?.specifications?.camera?.front?.resolution,
+      //           features: product?.specifications?.camera?.front?.features,
+      //         },
+      //       },
+      //       battery: {
+      //         capacity: product?.specifications?.battery?.capacity,
+      //         type: product?.specifications?.battery?.type,
+      //         charging: product?.specifications?.battery?.charging,
+      //       },
+      //       os: product?.specifications?.os,
+      //       connectivity: product?.specifications?.connectivity,
+      //       sensors: product?.specifications?.sensors,
+      //       colors: product?.specifications?.colors,
+      //       dimensions: {
+      //         height: product?.specifications?.dimensions?.height,
+      //         width: product?.specifications?.dimensions?.width,
+      //         depth: product?.specifications?.dimensions?.depth,
+      //         weight: product?.specifications?.dimensions?.weight,
+      //       },
+      //     },
+      //     warranty: product?.warranty,
+      //     stock: product?.stock,
+      //     rating: product?.rating,
+      //     reviews: product?.reviews,
+      //   },
+      // };
+
       const updateProduct = {
         $set: {
-          id: product?.id,
-          brand: product?.brand,
-          model: product?.model,
-          price: product?.price,
-          releaseDate: product?.releaseDate,
-          photoUrl: product?.photoUrl,
-          specifications: {
-            display: {
-              type: product?.specifications?.display?.type,
-              size: product?.specifications?.display?.size,
-              resolution: product?.specifications?.display?.resolution,
-            },
-            processor: product?.specifications?.processor,
-            ram: product?.specifications?.ram,
-            storage: product?.specifications?.storage,
-            camera: {
-              rear: product?.specifications?.camera?.rear,
-              front: {
-                resolution: product?.specifications?.camera?.front?.resolution,
-                features: product?.specifications?.camera?.front?.features,
-              },
-            },
-            battery: {
-              capacity: product?.specifications?.battery?.capacity,
-              type: product?.specifications?.battery?.type,
-              charging: product?.specifications?.battery?.charging,
-            },
-            os: product?.specifications?.os,
-            connectivity: product?.specifications?.connectivity,
-            sensors: product?.specifications?.sensors,
-            colors: product?.specifications?.colors,
-            dimensions: {
-              height: product?.specifications?.dimensions?.height,
-              width: product?.specifications?.dimensions?.width,
-              depth: product?.specifications?.dimensions?.depth,
-              weight: product?.specifications?.dimensions?.weight,
-            },
-          },
-          warranty: product?.warranty,
-          stock: product?.stock,
-          rating: product?.rating,
-          reviews: product?.reviews,
+          name: product.name,
+          price: product.price,
+          description: product.description,
+          stock: product.stock,
+          photoURL: product.photoURL,
         },
       };
-
       const option = { upsert: true };
 
       const result = productsCollection.updateOne(
@@ -214,7 +238,7 @@ async function run() {
 
     app.get("/categories", async (req, res) => {
       const categories = await categoriesCollection.find().toArray();
-      res.json(categories);
+      res.send(categories);
     });
 
     app.get("/categories/:categoryName", async (req, res) => {
