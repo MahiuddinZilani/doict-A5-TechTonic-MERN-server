@@ -25,7 +25,6 @@ const client = new MongoClient(uri, {
 
 // database & collections
 const database = client.db("techTonicDb");
-
 const usersCollection = database.collection("users");
 const productsCollection = database.collection("products");
 const categoriesCollection = database.collection("categories");
@@ -248,6 +247,29 @@ async function run() {
       const categories = await productsCollection.find(query).toArray();
       res.json(categories);
     });
+    app.post("/categories", async (req, res) => {
+      try {
+        const category = req.body;
+        const query = { name: category.name.toLowerCase() };
+        const existingCategory = await categoriesCollection.findOne(query);
+
+        if (existingCategory) {
+          return res.status(400).json({ message: "Category already exists" });
+        }
+
+        // Insert the new category, making sure to store the name in lowercase
+        const newCategory = {
+          ...category,
+          name: category.name.toLowerCase(),
+        };
+
+        const result = await categoriesCollection.insertOne(newCategory);
+        res.status(201).json(result);
+      } catch (error) {
+        console.error("Error adding category:", error);
+        res.status(500).json({ message: "Internal Server Error" });
+      }
+    });
 
     // ------------------------------- carts collection ---------------------
     app.get("/carts/:email", async (req, res) => {
@@ -265,10 +287,10 @@ async function run() {
     // --------------------------------- CRUD Ends -------------------------------------------
 
     // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log(
-      "Pinged your deployment. You successfully connected to MongoDB!"
-    );
+    // await client.db("admin").command({ ping: 1 });
+    // console.log(
+    //   "Pinged your deployment. You successfully connected to MongoDB!"
+    // );
   } finally {
     // Ensures that the client will close when you finish/error
     // await client.close();
